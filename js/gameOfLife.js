@@ -7,9 +7,21 @@ let rows;
 let currentGeneration;
 let chanceOfInfection = 350000;
 let chanceOfInfectionSpread = 100;
+var cnv;
 
+
+// TODO: Add buttons for Restarting, pause/resume, and stop sketch
 function setup(){
-  createCanvas(wWidth, wHeight);
+  cnv = createCanvas(wWidth, wHeight);
+
+  let xStart = (windowWidth-wWidth)/2;
+  let yStart = (windowHeight-wHeight+100)/2;
+
+  //this puts the canvas in the middle of the screen.
+  // TODO: this currently doesn't sit under the horizontal ruler on page
+  //        without the +100 for yStart
+  cnv.position(xStart,yStart);
+
   cols = wWidth/resolution;
   rows = wHeight/resolution;
 
@@ -138,21 +150,3 @@ function isNeighborInfected(currentGeneration, x, y){
   }
   return inf;
 }
-
-// //count the number of neighbors for the cell at x,y
-// function isNeighborDoctor(currentGeneration, x, y){
-//   let doc = false;
-//   //edge cases - treat them as cyclic <- prob not a word
-//   for(let i = -3; i < 4; i++){
-//     for(let j = -3; j < 4; j++){
-//       //exclude the node whose neighborhood it is
-//
-//         let a = (x + i + cols)% cols;   //x is the starting coord, cols is how wide the box is, i is which box it is
-//         let b = (y + j + rows)% rows;
-//         if(currentGeneration[a][b].doctor == 1){
-//           doc = true;
-//         }
-//     }
-//   }
-//   return doc;
-// }
