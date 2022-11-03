@@ -1,4 +1,4 @@
-let wWidth = 800;
+let wWidth = 1200;
 let wHeight = 400;
 let resolution = 5;
 
@@ -8,36 +8,29 @@ let currentGeneration;
 let chanceOfInfection = 350000;
 let chanceOfInfectionSpread = 100;
 var cnv;
+let resetButton;
+let pauseButton;
+let infSlider;
+let paused = false;
+const buttonPadding = 20;
 
 
-// TODO: Add buttons for Restarting, pause/resume, and stop sketch
 function setup(){
   cnv = createCanvas(wWidth, wHeight);
+  resetButton =createButton("reset");
+  resetButton.mouseClicked(startSketch);
 
-  let xStart = (windowWidth-wWidth)/2;
-  let yStart = (windowHeight-wHeight+100)/2;
+  pauseButton = createButton("Pause/Resume");
+  pauseButton.mouseClicked(pauseSketch);
 
-  //this puts the canvas in the middle of the screen.
-  // TODO: this currently doesn't sit under the horizontal ruler on page
-  //        without the +100 for yStart
-  cnv.position(xStart,yStart);
+  infSlider = createSlider(100,400000,chanceOfInfection);
 
-  cols = wWidth/resolution;
-  rows = wHeight/resolution;
-
-  currentGeneration = createGeneration(cols, rows);
-
-  for(let i = 0; i < cols; i++){
-    for(let j = 0; j < rows; j++){
-      let inf = floor(random(chanceOfInfection));
-      let newPair = {state: floor(random(2)), infected:  inf == 33 ? 1:0}; //probability if this cell is infected
-
-      currentGeneration[i][j] = newPair;  //each cell is binary - can be either 1 or 0
-    }
-  }
+  startSketch();
 }
 
 function draw(){
+  if(!paused)
+  {
     background(0);
 
     //draw the current generation
@@ -65,6 +58,7 @@ function draw(){
 
     //compute the next generation with rules
     let nextGeneration = createGeneration(cols, rows);
+    chanceOfInfection = infSlider.value();
 
     for(let i = 0; i < cols; i++){
       for(let j = 0; j < rows; j++){
@@ -102,6 +96,7 @@ function draw(){
     }
 
     currentGeneration = nextGeneration;
+  }
 }
 
 //create the 2d array
@@ -149,4 +144,37 @@ function isNeighborInfected(currentGeneration, x, y){
     }
   }
   return inf;
+}
+
+function startSketch(){
+  let xStart = (windowWidth-wWidth)/2;
+  let yStart = (windowHeight-wHeight+100)/2;
+
+  //this puts the canvas in the middle of the screen.
+  // TODO: this currently doesn't sit under the horizontal ruler on page
+  //        without the +100 for yStart
+  cnv.position(xStart,yStart);
+
+  cols = wWidth/resolution;
+  rows = wHeight/resolution;
+
+  currentGeneration = createGeneration(cols, rows);
+  chanceOfInfection = infSlider.value();
+
+  for(let i = 0; i < cols; i++){
+    for(let j = 0; j < rows; j++){
+      let inf = floor(random(chanceOfInfection));
+      let newPair = {state: floor(random(2)), infected:  inf == 33 ? 1:0}; //probability if this cell is infected
+
+      currentGeneration[i][j] = newPair;  //each cell is binary - can be either 1 or 0
+    }
+  }
+
+  pauseButton.position(xStart,yStart+wHeight);
+  resetButton.position(pauseButton.x+pauseButton.width+buttonPadding,yStart+wHeight);
+  infSlider.position(resetButton.x+resetButton.width+buttonPadding,yStart+wHeight);
+}
+
+function pauseSketch(){
+  paused = !paused;
 }

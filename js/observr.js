@@ -1,3 +1,4 @@
+//get all of the card elements from the DOM
 const hiddenElements = document.querySelectorAll('.card');
 
 const observer = new IntersectionObserver(
@@ -21,5 +22,5 @@ const observer = new IntersectionObserver(
 }
 );
 
-
+//add each card element to be observed
 hiddenElements.forEach((el) => observer.observe(el));
