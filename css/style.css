@@ -6,6 +6,11 @@
   text-align: right;
 }
 
+#enterSite{
+  font-size: 2rem;
+  padding: 0;
+}
+
 .navBar ul{
   list-style-type: none;
   margin: 0;
@@ -28,9 +33,23 @@
   color: #f78166;
 }
 
+#GitHub {
+  padding: 0px;
+  display: inline;
+  height: 40px;
+  width: 40px;
+}
+
+#portrait{
+  display: inline;
+  width: 250px;
+  height: 250px;
+}
+
 
 /* This controls the sytling for the body */
 body {background-color: #0d1117;}
+#welcomeScreen {margin: 0; margin-top:  1%;}
 
 section{
   display: grid;
@@ -39,17 +58,37 @@ section{
   min-height: 30vh;
 }
 
+#portraitSection{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 15vh;
+}
+
 p{
   color: #565d74;
   margin-bottom: 100px;
   margin-top: 100px;
 }
 
+#aboutMeParagraph{
+  color: #565d74;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 h1 {
     color:#0d1117;
     font-size: 50px;
     background-color: #f78166;
-    text-align: center;}
+    text-align: center;
+    margin-bottom: 0px;}
+
+h2 {
+  color:#565d74;
+  text-align: center;
+  margin: 2px;}  
 
 canvas {
   margin:auto;

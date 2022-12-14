@@ -6,8 +6,6 @@ Todo
 -----------
 - design/create about me page
 - design/create projects page
-- figure out how to scale p5js canvases properly so that it's based off of viewport
-- once above is fixed, redo the enter button on landing page
 - add in label for game of life slider
 
 Issues
