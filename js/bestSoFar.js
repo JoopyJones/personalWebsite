@@ -1,4 +1,4 @@
-let drawing = [
+export let drawing = [
   {x: 92, y: -78.5},
   {x: 94, y: -75.5},
   {x: 96, y: -72.5},

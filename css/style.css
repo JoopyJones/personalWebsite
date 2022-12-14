@@ -3,7 +3,12 @@
 }
 /* These control the headers on each page */
 .main-nav{
-  text-align: right;
+  text-align: center;
+}
+
+#enterSite{
+  font-size: 2rem;
+  padding: 0;
 }
 
 .navBar ul{
@@ -31,6 +36,7 @@
 
 /* This controls the sytling for the body */
 body {background-color: #0d1117;}
+#welcomeScreen {margin: 0; margin-top:  1%;}
 
 section{
   display: grid;

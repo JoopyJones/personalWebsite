@@ -6,21 +6,22 @@
 
     <script src="/js/libraries/p5.js"></script>
     <script src="/js/libraries/p5.dom.js"></script>
-    <script src="/js/discreteFourierTransform.js"></script>
-    <script src="/js/bestSoFar.js"></script>
+    <!-- <script src="/js/discreteFourierTransform.js"></script>
+    <script src="/js/bestSoFar.js"></script> -->
+    <script type="module" src="welcomeMain.js"></script>
 
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
-  <header>
-    <nav class="navBar main-nav">
-      <ul>
-        <li><a href="mainPage.html">Enter</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <body>
-    <script src="/js/complexFourierTransform.js"></script>
+  <body id="welcomeScreen">
+    <!-- <script src="/js/complexFourierTransform.js"></script> -->
+    <div id="lejoopFourier"></div>
+    <div id="welcomeButton">
+      <nav class="navBar main-nav">
+        <ul>
+          <li><a id="enterSite" href="mainPage.html">Enter</a></li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
