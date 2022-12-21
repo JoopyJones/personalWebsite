@@ -41,8 +41,8 @@
   color: #f78166;
 }
 
-#GitHub {
-  padding: 0px;
+#GitHub,#LinkedIn {
+  margin: 10px;
   display: inline;
   height: 40px;
   width: 40px;
@@ -54,6 +54,9 @@
   height: 250px;
 }
 
+strong{
+  color: white;
+}
 
 /* This controls the sytling for the body */
 body {background-color: #0d1117;}
