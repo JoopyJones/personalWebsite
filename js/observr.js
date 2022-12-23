@@ -18,7 +18,7 @@ const observer = new IntersectionObserver(
 },
 {
   //how much of the element needs to be on the screen for the function above to run
-  threshold: .9
+  threshold: .6
 }
 );
 

@@ -56,7 +56,7 @@ export default class LeJoopFourier
       }
 
       p5.setup = function () {
-        p5.createCanvas(cWidth, cHeight-(cHeight*.10));
+        p5.createCanvas(cWidth, cHeight);
         const skip = 1;
         for (let i = 0; i < drawing.length; i+=skip) {
           x.push((drawing[i].x*.9));

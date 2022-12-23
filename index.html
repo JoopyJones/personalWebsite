@@ -7,18 +7,30 @@
     <script src="/js/libraries/p5.js"></script>
     <script src="/js/libraries/p5.dom.js"></script>
     <script type="module" src="./js/welcomeMain.js"></script>
+    <script defer type="text/javascript" src="/js/observr.js"></script>
 
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
-  <body id="welcomeScreen">
+  <body>
     <div id="lejoopFourier"></div>
-    <div id="welcomeButton">
-      <nav class="navBar main-nav">
-        <ul>
-          <li><a id="enterSite" href="mainPage.html">Enter</a></li>
-        </ul>
-      </nav>
-    </div>
+    
+    <section class="card" id="portraitSection">
+        <img id="portrait" title="Jason Klein" src="/images/github_icon.png">
+        <h1>Hello there, I'm Jason</h1>
+        <h2>Curious, Creative, Lifelong Learner</h2>
+        <div>
+            <a target="_blank" href="https://github.com/JoopyJones" ><img id="GitHub" title="GitHub" src="/images/github_icon.png"></a>
+            <a target="_blank" href="https://linkedin.com/in/jasondklein" ><img id="LinkedIn" title="LinkedIn" src="/images/linkedin_icon.png"></a>
+        </div>
+        <p id="aboutMeParagraph">I'm a software developer who loves to learn and solve problems. <br><br>
+                               <strong>Skills:</strong> SQL, Java, C, JavaScript, Node.js/Express, HTML/CSS, MOCA <br>
+                                <strong>WMS Skills:</strong> Developing for RedPrairie/JDA/Blue Yonder, MOCA, DDA, Integrator,<br>
+                                            RF, JRXML/RPX reports</p>
+      </section>
+      <section class="card">
+        <h1 id="projects">Check out some of my projects!</h1>
+        <!-- <a href="gameOfLife.html">Game of Life</a> -->
+      </section>
   </body>
 </html>
