@@ -4,10 +4,8 @@ My own personal website. Project to production
 
 Todo
 -----------
-- design/create about me page
-- design/create projects page
-- add in label for game of life slider
+- add in picture of self
 
 Issues
 ----------
-- if the page if refreshed with the dev console open, canvas doesn't full render
+- when the page initially loads, the info section loads above where it should.

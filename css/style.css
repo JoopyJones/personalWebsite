@@ -34,7 +34,6 @@ strong{
   color: white;
 }
 
-/* This controls the sytling for the body */
 body {background-color: #0d1117;}
 
 section{
@@ -89,18 +88,3 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
-
-
-
-/* These control the fading effect for each section on the homepage */
-/* .card
-{
-  opacity: 0;
-  transition: 800ms;
-}
-
-.card.show
-{
-  opacity: 1;
-  backdrop-filter: invert(80%);
-} */
