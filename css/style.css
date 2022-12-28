@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 .navBar a{
   display: inline-block;
   color: #565d74;
@@ -33,6 +37,7 @@ body {background-color: #0d1117;}
 #lejoopFourier{
   height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
   position: sticky;
   top: 0;
   z-index: -1;
@@ -42,6 +47,7 @@ body {background-color: #0d1117;}
   align-items: center;
   background-color: rbga(13,17,23,.94);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 200px;
   display: flex;
   flex-direction: column;
