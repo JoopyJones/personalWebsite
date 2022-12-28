@@ -2,13 +2,6 @@
   box-sizing: border-box;
 }
 
-#lejoopFourier{
-  position: sticky;
-  overflow-x: hidden;
-  top: 0;
-  z-index: -1;
-}
-
 .navBar a{
   display: inline-block;
   color: #565d74;
@@ -25,29 +18,36 @@
 }
 
 #portrait{
+  border-radius: 30px;
   display: inline;
-  width: 250px;
   height: 250px;
+  width: 250px;
 }
 
 strong{
   color: white;
 }
 
-/* This controls the sytling for the body */
 body {background-color: #0d1117;}
 
-section{
-  align-items: center;
-  margin-top: 50px;
-  background-color: #0d1117;
+#lejoopFourier{
   height: 100vh;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  z-index: -1;
 }
 
 #portraitSection{
+  align-items: center;
+  background-color: rbga(13,17,23,.94);
+  backdrop-filter: blur(8px);
+  border-radius: 200px;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-top: 50px;
+  padding-top: 45px;
 }
 
 
@@ -85,18 +85,4 @@ img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-
-
-/* These control the fading effect for each section on the homepage */
-.card
-{
-  opacity: 0;
-  transition: 800ms;
-}
-
-.card.show
-{
-  opacity: 1;
 }
