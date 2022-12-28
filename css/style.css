@@ -2,13 +2,6 @@
   box-sizing: border-box;
 }
 
-#lejoopFourier{
-  position: sticky;
-  overflow-x: hidden;
-  top: 0;
-  z-index: -1;
-}
-
 .navBar a{
   display: inline-block;
   color: #565d74;
@@ -36,20 +29,32 @@ strong{
 
 body {background-color: #0d1117;}
 
-section{
+/* section{
   align-items: center;
   margin-top: 50px;
   background-color: rbga(13,17,23,.94);
   backdrop-filter: blur(8px);
   height: 100vh;
+} */
+
+#lejoopFourier{
+  height: 100vh;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  z-index: -1;
 }
 
 #portraitSection{
+  align-items: center;
+  background-color: rbga(13,17,23,.94);
+  backdrop-filter: blur(8px);
   border-radius: 200px;
-  padding-top: 45px;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-top: 50px;
+  padding-top: 45px;
 }
 
 
