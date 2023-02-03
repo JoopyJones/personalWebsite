@@ -1,4 +1,4 @@
- import {drawing} from './bestSoFar.js'
+ import {drawing} from './leJoopPath.js'
  //import {dft} from './discreteFourierTransform.js'
 
 export default class LeJoopFourier
